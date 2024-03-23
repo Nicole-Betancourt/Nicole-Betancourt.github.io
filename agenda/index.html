@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreta de contactos</title>
+
+</head>
+
+<body>
+
+    <h2>Libreta de contactos</h2>
+    <label for="name">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <button onclick="guardarContactos()">Agregar contacto</button>
+    <hr>
+    <table id="tablaDeContactos" border="2.5" style="background-color:aqua;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Contactos se añadirán aquí dinámicamente -->
+        </tbody>
+    </table>
+    <button onclick="limpiarContactos()"> Limpiar lista de contactos</button>
+    <br>
+    <a href="..index.html">Volver a pagina principal</a>
+
+    <script>
+        let contactos = [];
+        const tablaDeContactos = document.getElementById('tablaDeContactos').getElementsByTagName('tbody')[0];
+
+        function guardarContactos() {
+          const nombre = document.getElementById('nombre').value;
+          const email = document.getElementById('email').value;
+            if (nombre === '' || email === '') {
+              alert("Por favor completa el campo, está vacío");
+         return;
+        }
+
+           if (emailRepetido(email)){
+             alert("El email ya existe")
+             return;
+           }
+          const contacto = { nombre, email };
+          contactos.push(contacto);
+          actualizarContactos();
+        }
+
+
+        function actualizarContactos() {
+            tablaDeContactos.innerHTML = '';
+            contactos.forEach(function (contacto, index) {
+                const row = `<tr>
+                            <td>${contacto.nombre}</td>
+                            <td>${contacto.email}</td>
+                            <td><button onclick="eliminarContactos(${index})">Eliminar</button></td>
+                            <td><button onclick="modificarContactos(${index})">Modificar</button></td>
+                        </tr>`;
+                        tablaDeContactos.innerHTML += row;
+            });
+        }
+
+        function eliminarContactos(index) {
+                confirm("Estas seguro que quieres eliminar este contacto?")
+             if (confirm){
+            contactos.splice(index, 1);
+        } 
+            actualizarContactos();
+        }
+
+        function modificarContactos(index){
+          const contacto = contactos[index];
+          const nuevoNombre = prompt("Ingresa el nuevo nombre", contacto.nombre)
+          const nuevoEmail = prompt("Ingresa el nuevo email", contacto.email)
+          contactos[index] = {nombre: nuevoNombre, email: nuevoEmail};
+
+            actualizarContactos();
+        }
+
+        function emailRepetido (email){
+            return contactos.some(contacto => contacto.email === email);
+        }
+
+        function limpiarContactos(){
+          var respuesta = confirm("¿Estás seguro de que quieres eliminar todos los contactos?");
+           if (respuesta){
+            contactos = [];
+           } 
+          actualizarContactos();
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
