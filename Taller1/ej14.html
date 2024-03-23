@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 14</h2>
+    <p>Escribe una función verificarParidad que tome un número como parámetro 
+        y devuelva un mensaje indicando si es par o impar.</p>
+    <br>
+    <label>Por favor ingresa un número</label>
+    <input type="number" id="num" placeholder="...">
+    <button onclick="verificarParidad()">Enviar</button>
+    <p id="resultado"></p>
+    
+    <script>
+        function verificarParidad(){
+            let num = Number(document.getElementById("num").value);
+            let resultado;
+            if (num % 2 === 0) {
+               resultado = "El número es par.";
+            } else {
+               resultado = "El número es impar.";
+           }
+           document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej15.html">Ejercicio siguiente</a>
+</body>
+</html>

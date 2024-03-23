@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 20</h2>
+    <p>Crea una función validarTarjetaCredito que tome un número de tarjeta de crédito como parámetro 
+    y devuelva true si es válido (según algún algoritmo de validación simple), y false en caso contrario.</p>
+    <br>
+    <label>Ingresa el número de tarjeta de crédito</label>
+    <input type="text" id="numero">
+    <br>
+    <button onclick="validarTarjetaCredito()">Enviar</button>
+    <p id="resultado"></p>
+     
+    <script>
+        function validarTarjetaCredito() {
+            var numero = document.getElementById('numero').value;
+            var suma = 0;
+            var longitud = numero.length;
+            var esPar = longitud % 2;
+
+            for (var i = longitud - 1; i >= 0; i--) {
+                var digito = parseInt(numero.charAt(i));
+
+                if (i % 2 == esPar) { 
+                    digito *= 2;
+                }
+
+                if (digito > 9) {
+                    digito -= 9;
+                }
+
+                suma += digito;
+            }
+
+            var resultado = suma % 10 == 0;
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej21.html">Ejercicio siguiente</a>
+</body>
+</html>

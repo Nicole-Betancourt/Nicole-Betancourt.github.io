@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taller #1</title>
+    </head>
+    <body>
+        <h1 style="font-size: 42px; color: blue;"> Ejercicios </h1>
+        <p style="font-size: 32px;"> Bienvenido</p>
+        <p> Esta página,te ayudará a resolver múltiples ejercicios 
+            <br>
+            <br> Por favor elige que ejercicio deseas hacer
+        </p>
+    <select id="seleccionEjercicios">
+        <option value="vacio"> --- </option>
+        <option value="1"> 1. Declarar variable apellido. </option> 
+        <option value="2"> 2. Crear variable nombreCiudad.</option>
+        <option value="3"> 3. Calcular edad a partir del año de nacimiento. </option>
+        <option value="4">  4. Crear variable nombrePelicula. </option>
+        <option value="5"> 5. Crear variable nombreAnimal. </option>
+        <option value="6"> 6. Calcular área de un círculo. </option>
+        <option value="7"> 7. Calcular promedio de tres números. </option>
+        <option value="8">  8. Calcular edad futura. </option>
+        <option value="9"> 9. Calcular descuento. </option>
+        <option value="10"> 10. Generar número aleatorio. </option>
+        <option value="11">  11. Determinar si es mayor de edad. </option>
+        <option value="12"> 12. Comparar cadenas. </option>
+        <option value="13"> 13. Evaluar calificaciones. </option>
+        <option value="14"> 14. Verificar paridad de un número. </option>
+        <option value="15"> 15. Determinar si un número es positivo, negativo o cero. </option>
+        <option value="16"> 16. Verificar si una persona puede conducir. </option>
+        <option value="17"> 17. Determinar si un día de la semana es hábil. </option>
+        <option value="18">  18. Verificar si un año es bisiesto. </option>
+        <option value="19">  19. Determinar si un número es múltiplo de otro. </option>
+        <option value="20">  20. Validar un número de tarjeta de crédito. </option>
+        <option value="21"> 21. Determinar si un carácter es una vocal. </option>
+        <option value="22"> 22. Evaluar edades y determinar cuál es mayor. </option>
+        <option value="23">  23. Determinar en qué cuadrante se encuentra un punto en un plano. </option>
+        <option value="24"> 24. Clasificar un triángulo según la longitud de sus lados. </option>
+        <option value="25"> 25. Determinar si un día de la semana es laboral. </option>
+        <input type="submit" value="Enviar" onclick="irAPagina()">
+
+        <p id="resultado"></p>
+        <script>
+            alert("Hola, esta pagina fue hecha por Nicole Betancourt");
+        console.log("Hola, estas en la consola de mi página")
+        function irAPagina() {
+        var seleccion = document.getElementById("seleccionEjercicios");
+        var pagina = seleccion.options[seleccion.selectedIndex].value;
+        if (pagina !== "vacio") {
+            window.location.href = "ej" + pagina + ".html";
+        }
+    } 
+    </script>
+    </body>
+    </html>

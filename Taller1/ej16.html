@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 16</h2>
+    <p>Desarrolla una función puedeConducir que tome la edad y si tiene licencia como parámetros 
+        y devuelva true si la persona puede conducir, y false en caso contrario.</p>
+    <br>
+    <label> Ingresa tu edad </label>
+    <input type="number" id="edad">
+    <br>
+    <label>Tienes licencia de conducir?</label>
+    <br>
+    <select id="tieneLicencia">
+        <option value="true">Sí</option>
+        <option value="false">No</option>
+    </select>
+    <br>
+    <button onclick="puedeConducir()">Enviar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function puedeConducir() {
+            var edad = document.getElementById('edad').value;
+            var tieneLicencia = document.getElementById('tieneLicencia').value === 'true';
+            var resultado;
+            if (edad >= 18 && tieneLicencia) {
+                resultado = "Puedes conducir.";
+            } else {
+                resultado = "Lo siento, no puedes conducir.";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+    
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej17.html">Ejercicio siguiente</a>
+</body>
+</html>

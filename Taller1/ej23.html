@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 23</h2>
+    <p>Desarrolla una función determinarCuadrante que tome las coordenadas x e y
+    de un punto en un plano y devuelva en cuál cuadrante se encuentra.</p>
+    <br>
+    <label>Ingresa la coordenada X</label>
+    <input type="number" id="x">
+    <br>
+    <label>Ingresa la coordenada Y</label>
+    <input type="number" id="y">
+    <br>
+    <button onclick="determinarCuadrante()">Enviar</button>
+    <p id="resultado"></p>
+     
+    <script>
+        function determinarCuadrante() {
+            var x = document.getElementById('x').value;
+            var y = document.getElementById('y').value;
+            var resultado;
+            if (x > 0 && y > 0) {
+                resultado = "Primer cuadrante";
+            } else if (x < 0 && y > 0) {
+                resultado = "Segundo cuadrante";
+            } else if (x < 0 && y < 0) {
+                resultado = "Tercer cuadrante";
+            } else if (x > 0 && y < 0) {
+                resultado = "Cuarto cuadrante";
+            } else {
+                resultado = "El punto está en el origen o en uno de los ejes";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej24.html">Ejercicio siguiente</a>
+</body>
+</html>

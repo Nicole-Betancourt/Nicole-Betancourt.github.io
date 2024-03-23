@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 21</h2>
+    <p>Escribe una función esVocal que tome una letra como parámetro y devuelva true si es 
+    una vocal, y false en caso contrario.</p>
+    <br>
+    <label>Ingresa una letra</label>
+    <input type="text" id="letra" maxlength="1">
+    <br>
+    <button onclick="esVocal()">Enviar</button>
+    <p id="resultado"></p>
+     
+    <script>
+        function esVocal() {
+            var letra = document.getElementById('letra').value;
+            var vocales = ['a', 'e', 'i', 'o', 'u'];
+            var resultado;
+            if (vocales.includes(letra.toLowerCase())) {
+                resultado = true;
+            } else {
+                resultado = false;
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej22.html">Ejercicio siguiente</a>
+</body>
+</html>

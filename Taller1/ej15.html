@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 15</h2>
+    <p>Crea una función esPositivoONegativo que tome un número como parámetro 
+        y devuelva un mensaje indicando si es positivo, negativo o cero.</p>
+    <br>
+
+    <label>Por favor ingresa un número</label>
+    <input type="number" id="num" placeholder="...">
+    <button onclick="esPositivoONegativo()">Enviar</button>
+    <p id="resultado"></p>
+    
+    <script>
+        function esPositivoONegativo(){
+            let num = Number(document.getElementById("num").value);
+            let resultado;
+            if (num>0) {
+               resultado = "El número es positivo.";
+            } else if (num<0) {
+               resultado = "El número es negativo.";
+           } else {
+                resultado = "El número es igual a cero"
+           }
+           document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej16.html">Ejercicio siguiente</a>
+</body>
+</html>

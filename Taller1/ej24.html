@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 24</h2>
+    <p>Implementa una función clasificarTriangulo que tome la longitud de tres lados de un triángulo y 
+    devuelva un mensaje indicando si es equilátero, isósceles o escaleno.</p>
+    <br>
+    <label>Ingresa la longitud del primer lado</label>
+    <input type="number" id="lado1">
+    <br>
+    <label>Ingresa la longitud del segundo lado</label>
+    <input type="number" id="lado2">
+    <br>
+    <label>Ingresa la longitud del tercer lado</label>
+    <input type="number" id="lado3">
+    <br>
+    <button onclick="clasificarTriangulo()">Enviar</button>
+    <p id="resultado"></p>
+     
+    <script>
+        function clasificarTriangulo() {
+            var lado1 = document.getElementById('lado1').value;
+            var lado2 = document.getElementById('lado2').value;
+            var lado3 = document.getElementById('lado3').value;
+            var resultado;
+            if (lado1 === lado2 && lado2 === lado3) {
+                resultado = "El triángulo es equilátero.";
+            } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                resultado = "El triángulo es isósceles.";
+            } else {
+                resultado = "El triángulo es escaleno.";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej25.html">Ejercicio siguiente</a>
+</body>
+</html>

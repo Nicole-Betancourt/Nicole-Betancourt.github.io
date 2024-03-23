@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 4</h2>
+    <p>Crea una variable llamada nombrePelicula y asígnale el nombre de una película. </p>
+    <br>
+    <button id="botonAceptar" onclick="Pelicula()">Aceptar</button>
+    <p id="nombre"></p>
+
+    <script> 
+  var nombrePelicula = "Charlie y la fabrica de chocolate"
+    function Pelicula() {
+        document.getElementById("nombre").innerHTML = "Mi pelicula favorita es : " + nombrePelicula;
+        document.getElementById("imagen4").style.display = "block";
+    }
+    </script>
+    <img id="imagen4" src="e4.jpg" style="display: none;" height="350" width="350">
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej5.html">Ejercicio siguiente</a>
+</body>
+</html>

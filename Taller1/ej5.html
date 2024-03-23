@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 5 </h2>
+    <p>Crea una variable llamada nombreAnimal y asígnale el nombre de un animal.</p>
+    <br>
+    <button id="botonAceptar" onclick="Animal()">Aceptar</button>
+    <p id="nombreAnimal"></p>
+
+    <script> 
+  var nombreAnimal = "Rinoceronte"
+    function Animal() {
+        document.getElementById("nombreAnimal").innerHTML = "Mi animal es : " + nombreAnimal;
+        document.getElementById("imagen5").style.display = "block";
+    }
+    </script>
+    
+    <img id="imagen5" src="e5-1.jpeg" style="display: none;" height="350" width="350">
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej6.html">Ejercicio siguiente</a>
+
+</body>
+</html>

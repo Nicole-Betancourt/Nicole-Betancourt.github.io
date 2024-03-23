@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    
+<h2>Ejercicio 2</h2>
+
+<p> Crea una variable llamada nombreCiudad y asígnale el nombre de una ciudad. <br> </p>
+<button id="botonAceptar" onclick="mostrarCiudad()">Aceptar</button>
+<p id="ciudad"></p>
+
+<script>
+var ciudad = "Guadalajara de Buga";  
+
+function mostrarCiudad() {
+  document.getElementById("ciudad").innerHTML = "Mi ciudad favorita es : " + ciudad;
+  document.getElementById("imagenCiudad").style.display = "block";
+  document.getElementById("textoCiudad").style.display = "block";
+}
+</script>
+
+<img id="imagenCiudad" src="e2.jpeg" style="display: none;" height="300" width="300">
+<h4 id="textoCiudad" style="display: none;"> una ciudad en el valle del cauca, en Colombia </h4>
+<br>
+<a href="index.html"> Volver a página principal </a>
+<br>
+<a href="ej3.html">Ejercicio siguiente</a>
+</body>
+</html>

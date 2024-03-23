@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 12</h2>
+    <p>Crea una función compararCadenas que tome dos cadenas como parámetros
+         y devuelva true si son iguales, y false en caso contrario.</p>
+    <br>
+    <label>Ingresa la primera cadena </label>
+    <input type="text" id="cadena1" placeholder="...">
+    <br>
+    <label>Ingresa la segunda cadena</label>
+    <input type="text" id="cadena2" placeholder="...">
+    <button onclick="compararCadenas()">Comparars</button>
+    <p id="resultado"></p>
+
+    <script>
+        function compararCadenas() {
+            var cadena1 = document.getElementById("cadena1").value;
+            var cadena2 = document.getElementById("cadena2").value;
+            var resultado = cadena1 === cadena2;
+            if (cadena1===cadena2){
+                document.getElementById("resultado").innerHTML = "Las cadenas son iguales: " + resultado;
+            } else {
+                document.getElementById("resultado").innerHTML = "Las cadenas no son iguales: " + resultado;
+            }
+            
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej13.html">Ejercicio siguiente</a>
+</body>
+</html>

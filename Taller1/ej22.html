@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 22</h2>
+    <p>Crea una función evaluarEdades que tome dos edades como parámetros y devuelva un mensaje
+    indicando si son iguales, y si no lo son, cuál es mayor.</p>
+    <br>
+    <label>Ingresa la primera edad</label>
+    <input type="number" id="edad1">
+    <br>
+    <label>Ingresa la segunda edad</label>
+    <input type="number" id="edad2">
+    <br>
+    <button onclick="evaluarEdades()">Enviar</button>
+    <p id="resultado"></p>
+     
+    <script>
+        function evaluarEdades() {
+            var edad1 = document.getElementById('edad1').value;
+            var edad2 = document.getElementById('edad2').value;
+            var resultado;
+            if (edad1 === edad2) {
+                resultado = "Las edades son iguales.";
+            } else if (edad1 > edad2) {
+                resultado = "La primera edad es mayor.";
+            } else {
+                resultado = "La segunda edad es mayor.";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <br>
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej23.html">Ejercicio siguiente</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <h2>Ejercicio 9</h2>
+    <p>Implementa una función calcularDescuento que tome el precio original 
+        y el porcentaje de descuento como parámetros, y devuelva el precio con descuento.</p> 
+    <br>
+    <label>Escribe por favor el precio original del producto:</label>
+    <br>
+    <input type="number" id="precioOriginal">
+    <br>
+    <label>Escribe el porcentaje de descuento </label>
+    <br>
+    <input type="number" id="descuento">
+    <br>
+    <input type="submit" onclick="calcularDescuento()">
+    <p id="resultado"></p>
+
+    <script>
+     function calcularDescuento(){    
+        let precioOriginal = Number(document.getElementById("precioOriginal").value);
+        let descuento = Number(document.getElementById("descuento").value) / 100;
+       let precioFinal = precioOriginal - (precioOriginal * descuento);
+       document.getElementById("resultado").innerHTML = "El precio final es : " + precioFinal;
+        }
+    </script>
+
+    
+    <a href="index.html"> Volver a página principal </a>
+    <br>
+    <a href="ej10.html">Ejercicio siguiente</a>
+</body>
+</html>
